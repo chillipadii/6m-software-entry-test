@@ -1,10 +1,11 @@
 /*
     Task 1: 
     - Implement a Child class that extends the Parent.
-    - Add a constructor to the Child class can calls super().
+    - Add a constructor to the Child class that calls super().
     - Implement a new function addNewAbilities(newAbility) in the Child class where the new ability will be added to the Parent's #abilities array.     
 */
-class Parent{
+
+class Parent {
     abilities = []
 
     constructor(){
@@ -24,6 +25,15 @@ const p = new Parent();
 p.showAbilities(); // Observe that this function prints "Parenting" and "Role modeling".
 
 // Task 1: Add code here
+class Child extends Parent {
+    constructor() {
+        super();
+    }
+
+    addNewAbility(newAbility) {
+        this.abilities.push(newAbility);
+    }
+}
 
 const c = new Child();
 c.addNewAbility("Dancing");

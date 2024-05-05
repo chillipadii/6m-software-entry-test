@@ -8,8 +8,16 @@
         function add(){
             const num1 = document.querySelector("#num1").value;
             const num2 = document.querySelector("#num2").value;
-            const answer = num1 + num2;
-            document.querySelector("#answer").innerText = answer;
+
+            const answer = Number(num1) + Number(num2);
+
+            if (isNaN(answer)) {
+                alert("Please type numbers ONLY!")
+            } else if (num1 < 0 || num2 < 0) {
+                alert("Please enter positive numbers only.")
+            } else {
+                document.querySelector("#answer").innerText = answer;
+            }
         }
     </script>
 </head>
